@@ -16,6 +16,7 @@ import com.example.splash.models.NotesEntity
 import com.example.splash.viewmodel.NotesViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.snackbar.Snackbar
+import com.thebluealliance.spectrum.SpectrumPalette
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -32,21 +33,43 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentEditNoteBinding.bind(view)
-        setHasOptionsMenu(true)
+        // setHasOptionsMenu(true)
         navController=Navigation.findNavController(view)
         setNote()
 
-  // TODO lock the screen until edit button is not pressed
+        // TODO lock the screen until edit button is not pressed
         // TODO add delete icon and functionality in toolbar
         // TODO add date in xml file
 
-        binding.btnEdit.setOnClickListener {
-            binding.btnEdit.visibility = View.GONE
-            binding.btnSave.visibility = View.VISIBLE
-
+//        binding.btnEdit.setOnClickListener {
+//            binding.btnEdit.visibility = View.GONE
+//            binding.btnSave.visibility = View.VISIBLE
+//
+//        }
+        binding.btnBack.setOnClickListener{
+            navController.popBackStack()
         }
-        binding.btnSave.setOnClickListener {
+        binding.btnEdit.setOnClickListener {
             updateNote(it)
+        }
+        binding.fabColorPicker.setOnClickListener {
+            val bottomSheetColorPicker: BottomSheetDialog =
+                BottomSheetDialog(requireContext(), R.style.BottomSheetStyleColorPicker)
+            bottomSheetColorPicker.setContentView(R.layout.color_picker)
+
+
+            val colorPicker = bottomSheetColorPicker.findViewById<SpectrumPalette>(R.id.colorPicker)
+            colorPicker?.apply {
+                setSelectedColor(color)
+                setOnColorSelectedListener {
+                        value->
+                    color = value
+                    binding.editNotesFragment.setBackgroundColor(color)
+                    binding.toolBarEditNoteFragment.setBackgroundColor(color)
+                }
+            }
+
+            bottomSheetColorPicker.show()
         }
 
     }
@@ -54,6 +77,11 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note) {
     private fun setNote() {
         binding.etNoteTitle.setText(notesData.data.noteTitle)
         binding.etNoteDescription.setText(notesData.data.notesDescription)
+        binding.etTimeStamp.setText(notesData.data.notesTimestamp)
+        // TODO change the textcolor of timestamp to white if background is not black
+        color = notesData.data.color
+        binding.editNotesFragment.setBackgroundColor(color)
+        binding.toolBarEditNoteFragment.setBackgroundColor(color)
     }
 
     private fun updateNote(it: View) {
@@ -65,18 +93,17 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note) {
             val sdf = SimpleDateFormat("dd MMM, yyyy - HH:mm")
             val notesTimestamp: String = sdf.format(Date())
             val updateNote =
-                NotesEntity(notesData.data.id, noteTitle, notesDescription, notesTimestamp)
+                NotesEntity(notesData.data.id, noteTitle, notesDescription, notesTimestamp,color)
             viewModel.updateNote(updateNote)
             Toast.makeText(requireContext(), "Note Updated", Toast.LENGTH_SHORT).show()
-            Navigation.findNavController(it)
-                .navigate(R.id.action_editNoteFragment_to_homeNoteFragment2)
+            navController.popBackStack()
         }
     }
 
 
 
 
-
+/*
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.delete_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
@@ -103,5 +130,5 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note) {
             bottomSheet.show()
         }
         return super.onOptionsItemSelected(item)
-    }
+    }*/
 }

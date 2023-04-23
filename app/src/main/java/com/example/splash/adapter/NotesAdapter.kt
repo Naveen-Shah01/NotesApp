@@ -16,6 +16,7 @@ class NotesAdapter(val context: Context) : RecyclerView.Adapter<NotesAdapter.Vie
         val tvNoteTitle = binding.tvNoteTitle
         val tvTimeStamp = binding.tvTimeStamp
         val tvDescription = binding.tvNoteDescription
+        val noteItemBackground = binding.llNoteItemLayout
 
     }
 
@@ -39,7 +40,9 @@ class NotesAdapter(val context: Context) : RecyclerView.Adapter<NotesAdapter.Vie
         holder.tvNoteTitle.text = allNotes.noteTitle
         holder.tvTimeStamp.text = allNotes.notesTimestamp
         holder.tvDescription.text = allNotes.notesDescription
+holder.noteItemBackground.setBackgroundColor(allNotes.color)
 
+        // TODO implement if black background is there then change the textcolor
         holder.binding.root.setOnClickListener {
             val action =
                 HomeNoteFragmentDirections.actionHomeNoteFragmentToEditNoteFragment2(allNotes)

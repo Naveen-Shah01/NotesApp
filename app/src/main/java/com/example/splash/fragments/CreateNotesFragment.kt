@@ -59,10 +59,8 @@ class CreateNotesFragment : Fragment(R.layout.fragment_create_notes) {
                     binding.toolBarCreateNoteFragment.setBackgroundColor(color)
                 }
             }
-
             bottomSheetColorPicker.show()
         }
-
 
     }
 

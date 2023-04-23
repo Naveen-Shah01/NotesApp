@@ -83,7 +83,6 @@
                     android:textColor="@color/white"
                     android:textColorHint="#706A6A"
                     android:textSize="24sp" />
-
                 <EditText
                     android:id="@+id/etNoteDescription"
                     android:layout_width="match_parent"

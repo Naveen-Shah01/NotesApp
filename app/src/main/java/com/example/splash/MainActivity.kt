@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(
             this, ViewModelProvider.AndroidViewModelFactory.getInstance(application))[NotesViewModel::class.java]
 
-
         // to hide system toolbar, just comment this 3 lines
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController = navHostFragment.navController
