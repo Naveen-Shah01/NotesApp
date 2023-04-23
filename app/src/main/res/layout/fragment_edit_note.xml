@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editNotesFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".fragments.EditNoteFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolBarEditNoteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_corner"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/back_btn"
+            app:rippleColor="@color/white"
+            app:tint="@color/white" />
+        <ImageButton
+            android:id="@+id/btnEdit"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="start"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_corner"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/edit"
+            app:rippleColor="@color/card_red"
+            app:tint="@color/white"
+         />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#7C7C7B"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Save"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            app:rippleColor="@color/white"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolBarEditNoteFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/etNoteTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="8dp"
+
+                    android:background="@null"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:hint="Title"
+                    android:textColor="@color/white"
+                    android:textColorHint="#706A6A"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/etNoteDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@null"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:gravity="top"
+                    android:hint="Type Something..."
+                    android:inputType="textMultiLine"
+                    android:lineSpacingMultiplier="1.5"
+                    android:singleLine="false"
+                    android:textColor="@color/white"
+                    android:textColorHint="#706A6A"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabColorPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="15dp"
+            android:backgroundTint="#3F6468"
+            android:elevation="5dp"
+            android:src="@drawable/color_picker"
+            app:borderWidth="0dp"
+            app:fabSize="normal"
+            app:maxImageSize="30dp"
+            app:rippleColor="#7C7B79"
+            app:tint="@color/white" />
+    </FrameLayout>
+
+</RelativeLayout>

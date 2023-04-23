@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="noteColor1">#845EC2</color>
+    <color name="noteColor2">#D65DB1</color>
+    <color name="noteColor3">#FF6F91</color>
+    <color name="noteColor4">#FF9671</color>
+    <color name="noteColor5">#FFC75F</color>
+    <color name="noteColor6">#F9F871</color>
+    <color name="noteColor7">#B0A8B9</color>
+    <color name="noteColor8">#F37864</color>
+    <color name="noteColor9">#F3C5FF</color>
+    <color name="noteColor10">#DCF5FF</color>
+    <color name="noteColor11">#00C2A8</color>
+    <color name="noteColor12">#4FFBDF</color>
+    <color name="noteColor13">#FF8066</color>
+    <color name="noteColor14">#FEFEDF</color>
+    <color name="noteColor15">#FACCFF</color>
+
+    <color name="purple">#D4C4E3</color>
+    <color name="darkPurple">#9387F5</color>
+    <color name="blue">#A8DAF0</color>
+    <color name="peach">#F0C390</color>
+    <color name="green">#C3F09C</color>
+    <color name="orangeRed">#F3722C</color>
+    <color name="yellowOrange">#F8961E</color>
+    <color name="MangoTango">#F9844A</color>
+    <color name="maizeCrayola">#F9C74F</color>
+    <color name="card_purple">#8690B1</color>
+    <color name="card_yellow">#FFCC00</color>
+    <color name="card_red">#FF3B30</color>
+    <color name="card_violet">#FF9500</color>
+    <color name="card_blue">#5AC8FA</color>
+    <color name="card_green">#34C759</color>
+    <color name="light_green">#36E816</color>
+
+
+    <array name="color_picker">
+        <item>@color/black</item>
+        <item>@color/card_red</item>
+        <item>@color/orangeRed</item>
+        <item>@color/yellowOrange</item>
+        <item>@color/maizeCrayola</item>
+        <item>@color/card_yellow</item>
+        <item>@color/noteColor5</item>
+        <item>@color/MangoTango</item>
+        <item>@color/noteColor13</item>
+        <item>@color/noteColor2</item>
+        <item>@color/noteColor3</item>
+        <item>@color/noteColor4</item>
+        <item>@color/noteColor8</item>
+        <item>@color/noteColor15</item>
+        <item>@color/card_blue</item>
+        <item>@color/noteColor11</item>
+        <item>@color/noteColor12</item>
+        <item>@color/blue</item>
+        <item>@color/card_green</item>
+        <item>@color/light_green</item>
+        <item>@color/peach</item>
+        <item>@color/green</item>
+        <item>@color/purple</item>
+        <item>@color/darkPurple</item>
+        <item>@color/card_purple</item>
+        <item>@color/noteColor1</item>
+
+    </array>
+</resources>

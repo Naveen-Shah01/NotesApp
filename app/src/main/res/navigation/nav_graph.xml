@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeNoteFragment">
+
+    <fragment
+        android:id="@+id/homeNoteFragment"
+        android:name="com.example.splash.fragments.HomeNoteFragment"
+        android:label="Notes"
+        tools:layout="@layout/fragment_home_note" >
+        <action
+            android:id="@+id/action_homeNoteFragment_to_createNotesFragment"
+            app:destination="@id/createNootesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeNoteFragment_to_editNoteFragment2"
+            app:destination="@id/editNoteFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/createNootesFragment"
+        android:name="com.example.splash.fragments.CreateNotesFragment"
+        android:label="Add Note"
+        tools:layout="@layout/fragment_create_notes" >
+        <action
+            android:id="@+id/action_createNotesFragment_to_homeNoteFragment"
+            app:destination="@id/homeNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNoteFragment"
+        android:name="com.example.splash.fragments.EditNoteFragment"
+        android:label="Edit Note"
+        tools:layout="@layout/fragment_edit_note" >
+        <action
+            android:id="@+id/action_editNoteFragment_to_homeNoteFragment2"
+            app:destination="@id/homeNoteFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.example.splash.models.NotesEntity" />
+    </fragment>
+</navigation>
