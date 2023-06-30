@@ -14,8 +14,6 @@ The NotesApp project utilizes the following tech stack and open-source libraries
 - Version Control: Git
 
 **Open-Source Libraries:**
-- [Retrofit](https://square.github.io/retrofit/): For making HTTP requests and handling API communication.
-- [Glide](https://github.com/bumptech/glide): A powerful image loading and caching library for smooth image loading within the app.
 - [Kotlin Coroutines](https://developer.android.com/kotlin/coroutines): For asynchronous and non-blocking programming, simplifying background tasks.
 - [Material Components for Android](https://github.com/material-components/material-components-android): Provides a set of customizable UI components following the Material Design guidelines.
 - [Room](https://developer.android.com/training/data-storage/room): An abstraction layer over SQLite, simplifying database operations and data management.
