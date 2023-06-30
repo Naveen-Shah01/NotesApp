@@ -7,7 +7,7 @@ NotesApp is an Android application built with Kotlin that allows users to create
 The NotesApp project utilizes the following tech stack and open-source libraries:
 
 **Tech Stack:**
-- Language: Kotlin
+- Language: [Kotlin](https://kotlinlang.org/)
 - Android Development: Android SDK, Android Studio
 - User Interface: XML, Android Layouts
 - Data Persistence: SQLite Database
@@ -21,7 +21,6 @@ The NotesApp project utilizes the following tech stack and open-source libraries
 - [Room](https://developer.android.com/training/data-storage/room): An abstraction layer over SQLite, simplifying database operations and data management.
 - [Navigation Component](https://developer.android.com/guide/navigation): For handling navigation between different screens and managing the app's navigation graph.
 
-These open-source libraries enhance the functionality and performance of NotesApp, allowing for efficient networking, image loading, data persistence, and smooth navigation. By leveraging these libraries, NotesApp provides a robust and feature-rich user experience.
 
 ## Features
 
