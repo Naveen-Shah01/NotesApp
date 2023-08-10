@@ -33,19 +33,11 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentEditNoteBinding.bind(view)
-        // setHasOptionsMenu(true)
+ 
         navController=Navigation.findNavController(view)
         setNote()
 
-        // TODO lock the screen until edit button is not pressed
-        // TODO add delete icon and functionality in toolbar
-        // TODO add date in xml file
 
-//        binding.btnEdit.setOnClickListener {
-//            binding.btnEdit.visibility = View.GONE
-//            binding.btnSave.visibility = View.VISIBLE
-//
-//        }
         binding.btnBack.setOnClickListener{
             navController.popBackStack()
         }
@@ -78,7 +70,7 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note) {
         binding.etNoteTitle.setText(notesData.data.noteTitle)
         binding.etNoteDescription.setText(notesData.data.notesDescription)
         binding.etTimeStamp.setText(notesData.data.notesTimestamp)
-        // TODO change the textcolor of timestamp to white if background is not black
+       
         color = notesData.data.color
         binding.editNotesFragment.setBackgroundColor(color)
         binding.toolBarEditNoteFragment.setBackgroundColor(color)
@@ -99,36 +91,5 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note) {
             navController.popBackStack()
         }
     }
-
-
-
-
-/*
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.delete_menu, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.menu_delete) {
-            val bottomSheet: BottomSheetDialog =
-                BottomSheetDialog(requireContext(), R.style.BottomSheetStyleDelete)
-            bottomSheet.setContentView(R.layout.delete_dialog)
-            val tvYes = bottomSheet.findViewById<TextView>(R.id.deleteDialogYes)
-            val tvNo = bottomSheet.findViewById<TextView>(R.id.deleteDialogNo)
-
-            tvYes?.setOnClickListener {
-
-                viewModel.deleteNote(notesData.data)
-
-                findNavController().navigate(R.id.action_editNoteFragment_to_homeNoteFragment2)
-                Toast.makeText(requireContext(), "Note Deleted", Toast.LENGTH_LONG).show()
-                bottomSheet.dismiss()
-            }
-            tvNo?.setOnClickListener {
-                bottomSheet.dismiss()
-            }
-            bottomSheet.show()
-        }
-        return super.onOptionsItemSelected(item)
-    }*/
+    
 }
