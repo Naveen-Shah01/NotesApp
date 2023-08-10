@@ -82,8 +82,6 @@ class CreateNotesFragment : Fragment(R.layout.fragment_create_notes) {
                 )
             )
             Toast.makeText(requireContext(),"Note Saved",Toast.LENGTH_SHORT).show()
-            // TODO finish this fragment
-              // 1. TODO check This Functionality
                 navController.popBackStack()
         }
     }
