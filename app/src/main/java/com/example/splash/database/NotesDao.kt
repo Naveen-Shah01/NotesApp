@@ -6,19 +6,19 @@ import com.example.splash.models.NotesEntity
 
 @Dao
 interface NotesDao {
-    //create a suspend insert function for saving an entry
+    //suspend insert function for saving an entry
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(notesEntity: NotesEntity)
 
-    // create a suspend update function for updating an existing entry
+    //  suspend update function for updating an existing entry
     @Update
     suspend fun update(notesEntity: NotesEntity)
 
-    // create a suspend delete function for deleting an existing entry
+    // suspend delete function for deleting an existing entry
     @Delete
     suspend fun delete(notesEntity: NotesEntity)
 
-    //create a function to read all notes, this returns a Livedata
+    //function to read all notes, this returns a Livedata
     @Query("Select * from `notes-table` order by id DESC")
     fun getAllNotes(): LiveData<List<NotesEntity>>
 
