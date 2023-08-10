@@ -42,7 +42,6 @@ class NotesAdapter(val context: Context) : RecyclerView.Adapter<NotesAdapter.Vie
         holder.tvDescription.text = allNotes.notesDescription
 holder.noteItemBackground.setBackgroundColor(allNotes.color)
 
-        // TODO implement if black background is there then change the textcolor
         holder.binding.root.setOnClickListener {
             val action =
                 HomeNoteFragmentDirections.actionHomeNoteFragmentToEditNoteFragment2(allNotes)
