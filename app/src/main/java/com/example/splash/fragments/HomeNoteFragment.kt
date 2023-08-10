@@ -25,10 +25,6 @@ class HomeNoteFragment : Fragment(R.layout.fragment_home_note) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeNoteBinding.bind(view)
         val navController = Navigation.findNavController(view)
-        //  setHasOptionsMenu(true)
-        // TODO implement searchview in custom tool bar
-        // TODO implement diffUtil function in recyclerview
-
 
         // 2 . color added in RecyclerView NotesAdapter
         setUpRecyclerView()
@@ -66,7 +62,7 @@ class HomeNoteFragment : Fragment(R.layout.fragment_home_note) {
         binding.rvNotesList.adapter = notesAdapter
 
 
-        // 4. Transition Added in recyclerView
+        // Transition Added in recyclerView
         binding.rvNotesList.apply {
             postponeEnterTransition(300L, TimeUnit.MILLISECONDS)
             viewTreeObserver.addOnPreDrawListener {
@@ -82,34 +78,9 @@ class HomeNoteFragment : Fragment(R.layout.fragment_home_note) {
             } else {
                 binding.noData.visibility= View.GONE
                 notesAdapter.updateList(list)
-                //TODO correct the glitch as it is visible for milliseconds
-
             }
         })
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-//        inflater.inflate(R.menu.search_menu, menu)
-//
-//        val item = menu.findItem(R.id.menu_search)
-//        val searchView = item.actionView as SearchView
-//        searchView.queryHint = "Search Notes..."
-//
-//
-//        searchView.setOnQueryTextListener(object: OnQueryTextListener{
-//            override fun onQueryTextSubmit(nextText: String?): Boolean {
-//                return false
-//            }
-//
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                if(newText!=null) {
-//                    notesAdapter.filterList(newText)
-//                }
-//                return true
-//            }
-//
-//        })
-//        super.onCreateOptionsMenu(menu, inflater)
-//    }
 
 }
