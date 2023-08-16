@@ -20,6 +20,8 @@ The NotesApp project utilizes the following tech stack and open-source libraries
 - [Material Components for Android](https://github.com/material-components/material-components-android): Provides a set of customizable UI components following the Material Design guidelines.
 - [Room](https://developer.android.com/training/data-storage/room): An abstraction layer over SQLite, simplifying database operations and data management.
 - [Navigation Component](https://developer.android.com/guide/navigation): For handling navigation between different screens and managing the app's navigation graph.
+- [Spectrum Color Picker](https://github.com/the-blue-alliance/spectrum): A color picker library for Android applications.
+
 
 
 ## Features
