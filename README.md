@@ -10,6 +10,8 @@ The NotesApp project utilizes the following tech stack and open-source libraries
 - Language: [Kotlin](https://kotlinlang.org/)
 - Android Development: Android SDK, Android Studio
 - User Interface: XML, Android Layouts
+- Data Binding: Android Data Binding library 
+- Architecture Pattern: MVVM (Model-View-ViewModel)
 - Data Persistence: SQLite Database
 - Version Control: Git
 
