@@ -24,16 +24,10 @@ The NotesApp project utilizes the following tech stack and open-source libraries
 
 
 ## Preview
+- ![Homepage](https://drive.google.com/uc?export=view&id=16fH2nwpj6Q45Aeuu2vXTWTyeUKJLIBH2)
+- ![Note](https://drive.google.com/uc?export=view&id=12BtXjpN4UNuDsAfyYuAMAqAtsBXfSiTa)
 - ![](https://github.com/Naveen-Shah01/NotesApp/blob/master/video%20(1).gif)
-## Screenshots
 
-Here are some screenshots that provide a glimpse of the SavePlaces app:
-
-- ![Home Screen](https://drive.google.com/file/d/16fH2nwpj6Q45Aeuu2vXTWTyeUKJLIBH2/view?usp=drive_link)
-  
-- ![Add New Place](https://drive.google.com/file/d/12BtXjpN4UNuDsAfyYuAMAqAtsBXfSiTa/view?usp=drive_link)
-
-  
 
 
 ## Features
