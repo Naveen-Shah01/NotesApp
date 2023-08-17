@@ -23,6 +23,8 @@ The NotesApp project utilizes the following tech stack and open-source libraries
 - [Spectrum Color Picker](https://github.com/the-blue-alliance/spectrum): A color picker library for Android applications.
 
 
+## Preview
+![](https://github.com/Naveen-Shah01/NotesApp/blob/master/video%20(1).gif)
 
 ## Features
 
